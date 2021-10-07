@@ -13,6 +13,8 @@ services:
             dockerfile: PHP.dockerfile
         volumes:
             - ./app:/app
+        depends_on: 
+            - web
     mysql:
         image: mariadb:latest
         environment:
@@ -27,8 +29,11 @@ services:
         image: phpmyadmin
         restart: always
         ports:
-        - 8080:80
+            - 8080:80
         environment:
             PMA_HOST: mysql
+        depends_on:
+            - web
+            - mysql
 volumes:
     mysqldata: {}
