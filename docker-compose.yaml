@@ -2,6 +2,9 @@ version: '3'
 services:
     web:
         image: nginx:latest
+        build:
+            context: .
+            dockerfile: nginx.dockerfile
         ports:
             - "80:80"
         volumes:
