@@ -33,4 +33,8 @@ The following steps will set-up your development environment
 
 ## Using the environment
 The extracted files contains a folder called "app". Inside this folder there is another folder called "public". The public folder is where you will need to place your own code and files that are publicly available to the outside world. Everything else is private. 
+### php.ini
+The file ```custom.php.ini```is there to add custom php settings that overwrite the default setting. Just add the settings you want to change to this file and they will overwrite the default settings of the PHP instance.
+
+Note: If you need additional software like ```sendmail```, you will have to add this yourself to either the container or add a new container containing the additional software.
 
