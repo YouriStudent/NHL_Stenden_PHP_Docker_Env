@@ -27,7 +27,8 @@ The following steps will set-up your development environment
 ```docker-compose up```
 
 5. Wait for docker to start up the container.
-6. Go to [127.0.0.1](http://127.0.0.1) in your favorite browser, you should see the welcome screen.
+6. Go to [127.0.0.1](http://127.0.0.1) in your favorite browser, you should see the welcome screen. 
+7. Read this welcome screen well! It contains useful information regarding the running database and the PHPMyAdmin instance.
 
 
 
