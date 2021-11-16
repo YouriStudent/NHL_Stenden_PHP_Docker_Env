@@ -2,6 +2,10 @@ version: '3'
 services:
     web:
         image: nginx:latest
+        environment:
+          - DB_USER=${DB_SERVER}
+          - DB_USER=${DB_USER}
+          - DB_USER=${DB_PASSWORD}
         ports:
             - "80:80"
         volumes:
@@ -16,7 +20,7 @@ services:
     mysql:
         image: mariadb:latest
         environment:
-            MYSQL_ROOT_PASSWORD: 'qwerty'
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
             #MYSQL_USER: 'root'
             #MYSQL_PASSWORD: 'secret'
         volumes:
