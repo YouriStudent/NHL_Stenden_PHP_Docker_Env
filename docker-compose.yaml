@@ -6,6 +6,9 @@ services:
             - DB_USER=${DB_SERVER}
             - DB_USER=${DB_ROOT_USER}
             - DB_USER=${DB_ROOT_PASSWORD}
+        build:
+            context: .
+            dockerfile: nginx.dockerfile
         ports:
             - "80:80"
         volumes:
@@ -17,6 +20,8 @@ services:
             dockerfile: PHP.dockerfile
         volumes:
             - ./app:/app
+        depends_on:
+            - web
     mysql:
         image: mariadb:latest
         environment:
@@ -34,5 +39,8 @@ services:
             - 8080:80
         environment:
             PMA_HOST: mysql
+        depends_on:
+            - web
+            - mysql
 volumes:
     mysqldata: {}
