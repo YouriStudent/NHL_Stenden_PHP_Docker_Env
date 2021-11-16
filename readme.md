@@ -31,9 +31,24 @@ The following steps will set-up your development environment
 7. Read this welcome screen well! It contains useful information regarding the running database and the PHPMyAdmin instance.
 
 
-
 ## Using the environment
 The extracted files contains a folder called "app". Inside this folder there is another folder called "public". The public folder is where you will need to place your own code and files that are publicly available to the outside world. Everything else is private. 
+
+### Addresses for applications
+| Service         | External address                        | Internal containername |
+|-----------------|-----------------------------------------|------------------------|
+| PHPMyAdmin      | [127.0.0.1:8080](http://127.0.0.1:8080) | phpmyadmin             |
+| MySql (MariaDB) | [127.0.0.1:3306](http://127.0.0.1:3306) | mysql                  |
+
+### Connecting to the database from PHP
+In order to connect from PHP to the database, some special attention is needed. Instead of using the external ```127.0.0.1:3306``` address. You will need to use the internal containername as stated in the docker-compose file. In the default case this is ```mysql```. 
+
+In PHP you can use it as follows:
+```php
+<?php
+    $conn = mysqli_connect("mysql", "root", "qwerty") or die(mysqli_connect_error());
+?>
+```
 ### php.ini
 The file ```custom.php.ini```is there to add custom php settings that overwrite the default setting. Just add the settings you want to change to this file and they will overwrite the default settings of the PHP instance.
 
