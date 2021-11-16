@@ -47,4 +47,4 @@ The extracted files contains a folder called "app". Inside this folder there is 
 The database user and password can be found in ".env". The database can be accessed by connecting to `[127.0.0.1:3306]` with you favorite database tool.
 
 to get acces too the environmental variables in PHP you can use
-`$_PHP["example"]` change example with the name of the variable.
+`$_ENV["example"]` change example with the name of the variable.
