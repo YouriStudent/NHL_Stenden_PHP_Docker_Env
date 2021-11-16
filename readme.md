@@ -42,11 +42,9 @@ The following steps will set-up your development environment
 
 The extracted files contains a folder called "app". Inside this folder there is another folder called "public". The public folder is where you will need to place your own code and files that are publicly available to the outside world. Everything else is private.
 
-## Database
+## Database - Mariadb
 
-Database type - Mariadb
-
-The database user and password can be found in ".env". The database can be accessed by connecting to [127.0.0.1:3306] with you favorite database
+The database user and password can be found in ".env". The database can be accessed by connecting to `[127.0.0.1:3306]` with you favorite database tool.
 
 to get acces too the environmental variables in PHP you can use
 `$_PHP["example"]` change example with the name of the variable.
