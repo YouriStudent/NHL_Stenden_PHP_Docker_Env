@@ -33,17 +33,13 @@ The following steps will set-up your development environment
    - Alternatively you can use the terminal to navigate or use a file explorer to open a terminal in the desired folder (Windows: `Shift + right click in explorer -> Powershell`)
 4. Execute the following docker-compose command
 
-`docker-compose up`
+``` powershell
+docker-compose up
+```
 
 5. Wait for docker to start up the container.
-<<<<<<< HEAD
 6. Go to [127.0.0.1](http://127.0.0.1) in your favorite browser, you should see the welcome screen. 
 7. Read this welcome screen well! It contains useful information regarding the running database and the PHPMyAdmin instance.
-=======
-6. Go to [127.0.0.1](http://127.0.0.1) in your favorite browser, you should see the welcome screen.
-
-## Using the environment
->>>>>>> remotes/origin/localhost_fix
 
 The extracted files contains a folder called "app". Inside this folder there is another folder called "public". The public folder is where you will need to place your own code and files that are publicly available to the outside world. Everything else is private.
 
@@ -51,7 +47,6 @@ The extracted files contains a folder called "app". Inside this folder there is 
 
 The database user and password can be found in ".env". The database can be accessed by connecting to `[127.0.0.1:3306]` with you favorite database tool.
 
-<<<<<<< HEAD
 ### Addresses for applications
 | Service         | External address                        | Internal containername |
 |-----------------|-----------------------------------------|------------------------|
@@ -59,20 +54,24 @@ The database user and password can be found in ".env". The database can be acces
 | MySql (MariaDB) | [127.0.0.1:3306](http://127.0.0.1:3306) | mysql                  |
 
 ### Connecting to the database from PHP
-In order to connect from PHP to the database, some special attention is needed. Instead of using the external ```127.0.0.1:3306``` address. You will need to use the internal containername as stated in the docker-compose file. In the default case this is ```mysql```. 
+In order to connect from PHP to the database, some special attention is needed. Instead of using the external `127.0.0.1:3306` address. You will need to use the internal containername as stated in the docker-compose file. In the default case this is `mysql`. 
 
 In PHP you can use it as follows:
-```php
+``` php
 <?php
     $conn = mysqli_connect("mysql", "root", "qwerty") or die(mysqli_connect_error());
 ?>
 ```
 ### php.ini
 The file ```custom.php.ini```is there to add custom php settings that overwrite the default setting. Just add the settings you want to change to this file and they will overwrite the default settings of the PHP instance.
+If you want to get access too the environmental variables whithin PHP, you can use:
+``` php
+<?php
+  $_ENV["example"];
+?>
+``` 
+Change "example" to the name of the variable you want to access.
 
-Note: If you need additional software like ```sendmail```, you will have to add this yourself to either the container or add a new container containing the additional software.
+Note: If you need additional software like `sendmail`, you will have to add this yourself to either the container or add a new container containing the additional software.
 
-=======
-to get acces too the environmental variables in PHP you can use
-`$_ENV["example"]` change example with the name of the variable.
->>>>>>> remotes/origin/localhost_fix
+

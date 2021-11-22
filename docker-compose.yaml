@@ -21,12 +21,9 @@ services:
             - DB_PASSWORD=${DB_ROOT_PASSWORD}
         volumes:
             - ./app:/app
-<<<<<<< HEAD
             - ./custom.php.ini:/usr/local/etc/php/conf.d/php.ini
-=======
         depends_on:
             - web
->>>>>>> remotes/origin/localhost_fix
     mysql:
         image: mariadb:latest
         environment:
