@@ -22,7 +22,7 @@ p{
     padding-top: 10px;
     padding-left: 5%;
     padding-right: 5%;
-    background-image: url("https://start.nhlstenden.com/img/bg-page.png");
+    background-image: url("/img/bg-page.png");
     max-width: 1224px;
     min-height: 95vh;
     background-size: cover;
@@ -68,7 +68,7 @@ header{
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background: url("https://start.nhlstenden.com/img/bg-tile-1x1.png") no-repeat center/cover;
+    background: url("/img/bg-tile.png") no-repeat center/cover;
     color: teal;
     text-decoration: none;
     padding: 5px;
@@ -106,7 +106,7 @@ header{
     box-shadow: 5px 5px 15px rgb(0, 0, 0);
     padding: 5px;
     font-size: 1.2em;
-    background: url("https://start.nhlstenden.com/img/bg-tile-1x1.png") no-repeat center/cover;
+    background: url("/img/bg-tile.png") no-repeat center/cover;
 }
 #copy{
     color: white;
