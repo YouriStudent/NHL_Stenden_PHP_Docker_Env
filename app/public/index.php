@@ -20,7 +20,7 @@
                 <h1>Hello World!</h1>
             </div>
         </header>
-        <section class="tiles">
+        <div class="tiles">
             <div class="lgTile">
                 <h2>Welcome</h2>
                 <p>This screen indicates that the docker PHP development environment for NHL-Stenden is running! 🥳 You
@@ -30,14 +30,14 @@
                 <h3>Database</h3>
                 <p>The database is accessible at <a href="http://localhost:3306">localhost:3306</a>. The default username is <strong>"root"</strong>
                     with password <strong>"qwerty"</strong>. Keep in mind, this is a root user with all permissions. To add another
-                    user, navigate to the <strong>.env</strong> file and uncomment the two DB_ lines and fill in the desired user. Afterward, use <i>docker-compose up</i> to initiate the environment.
+                    user, navigate to the <strong>.env</strong> file and uncomment the two DB_ lines and fill in the desired user. Afterward, use <i>docker compose up</i> to initiate the environment.
                 </p>
                 <p>You use PHPMyAdmin at <a href="http://localhost:8080">localhost:8080</a> to access the database or by using another tool like MySQL Workbench. The before-mentioned login information still applies.</p>
                 <p>Happy coding! 🐱‍👤</p>
             </div>
 
-        </section>
-        <section class="tiles">
+        </div>
+        <div class="tiles">
             <a class="smTile" href="http://localhost:8080" target="_blank">
                 <span class="image">
                     <span class="image-holder">
@@ -110,7 +110,7 @@
                 </span>
                 <div class="title">W3C Validator</div>
             </a>
-        </section>
+        </div>
         <footer id="copy">
             &copy; NHL-Stenden 2022-2023
         </footer>
