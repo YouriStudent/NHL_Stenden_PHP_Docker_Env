@@ -38,7 +38,7 @@ docker compose up
 ```
 
 5. Wait for docker to start up the container.
-6. Go to [127.0.0.1](http://127.0.0.1) in your favorite browser, you should see the welcome screen. 
+6. Go to [localhost](http://localhost) in your favorite browser, you should see the welcome screen. 
 7. Read this welcome screen well! It contains useful information regarding the running database and the PHPMyAdmin instance.
 
 The extracted files contains a folder called "app". Inside this folder there is another folder called "public". The public folder is where you will need to place your own code and files that are publicly available to the outside world. Everything else is private.
